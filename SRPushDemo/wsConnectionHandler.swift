@@ -45,7 +45,7 @@ class wsConnectionHandler: NSObject {
         
         var request = URLRequest(url: URL(string: hostname)!);
         request.setValue(session, forHTTPHeaderField: "session");
-        request.setValue("true", forHTTPHeaderField: "ios");
+        request.setValue("IOS", forHTTPHeaderField: "Platform");
         socket = WebSocket(request: request);
         
         socket.onConnect = {
