@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     var SoPass: String = "641b788bcd0fd46eed0f41870a5fc804560f7fba";
     var apiHost: String = "http://192.168.1.100:9779/api/createSession";
     //var apiHost = "https://testcom1.srpush.ir:2021/api/createSession";
-    //var wsHost = "ss://testcom1.srpush.ir:2020";
+    //var wsHost = "wss://testcom1.srpush.ir:2020";
     var wsHost: String = "ws://192.168.1.100:9780";
     var clientUserID = "DRIVER_146";
     var sessionExpireTime = 0; // session expire after this time (as seconds)
@@ -29,19 +29,19 @@ class ViewController: UIViewController {
             return;
         }
         
-        lbl_status.text = "Connecting...";
+        lbl_status.text = "connecting";
         btn_connect.isEnabled = false;
         
         _ = wsConnectionHandler.registerForOnConnect(cb: { () in
-            print("connect");
-            self.lbl_status.text = "Connected";
+            print("online");
+            self.lbl_status.text = "online";
             self.btn_connect.setTitle("Disconnect", for: .normal)
             self.btn_connect.isEnabled = true;
         });
         
         _ = wsConnectionHandler.registerForOnDisConnect(cb: { (error: Error?) in
-            print("disconnect");
-            self.lbl_status.text = "Disconnected";
+            print("offline");
+            self.lbl_status.text = "offline";
             self.btn_connect.setTitle("Connect", for: .normal)
             self.btn_connect.isEnabled = true;
             //self.connectWS();
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     @IBAction func ConnectClick(_ sender: Any) {
         if (wsConnectionHandler.isConnected()) {
             wsConnectionHandler.disconnect();
-            lbl_status.text = "disconnected";
+            lbl_status.text = "offline";
             btn_connect.setTitle("Connect", for: .normal)
             return;
         }
