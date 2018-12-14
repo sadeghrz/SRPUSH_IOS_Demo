@@ -4,12 +4,14 @@ import Alamofire
 
 class ViewController: UIViewController {
     
-    var Username: String = "5ba4b8939f63c33b916cfe2f";
-    var Pass: String = "ad016775cc42cdc93a9347482d3375c480e37b39";
+    var Username: String = "testcom1";
+    var SoPass: String = "641b788bcd0fd46eed0f41870a5fc804560f7fba";
     var apiHost: String = "http://192.168.1.100:9779/api/createSession";
+    //var apiHost = "https://testcom1.srpush.ir:2021/api/createSession";
+    //var wsHost = "ss://testcom1.srpush.ir:2020";
     var wsHost: String = "ws://192.168.1.100:9780";
-    var clientUserID = "DRIVER_145";
-    var sessionExpireTime = 500; // session expire after this time (as seconds)
+    var clientUserID = "DRIVER_146";
+    var sessionExpireTime = 0; // session expire after this time (as seconds)
     var session: String = "";
     
     @IBOutlet weak var lbl_status: UILabel!
@@ -74,7 +76,7 @@ class ViewController: UIViewController {
             "Content-Type": "application/json; charset=utf-8"
         ]
         
-        if let authorizationHeader = Request.authorizationHeader(user: self.Username, password: self.Pass) {
+        if let authorizationHeader = Request.authorizationHeader(user: self.Username, password: self.SoPass) {
             headers[authorizationHeader.key] = authorizationHeader.value
         }
         

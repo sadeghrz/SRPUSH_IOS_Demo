@@ -54,8 +54,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCO-b0-zv6">
-                                <rect key="frame" x="118" y="79" width="139" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCO-b0-zv6">
+                                <rect key="frame" x="16" y="79" width="343" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="GetSession"/>
                                 <connections>
@@ -80,13 +80,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oCO-b0-zv6" secondAttribute="trailing" constant="147" id="0Ab-ho-tPw"/>
                             <constraint firstItem="6qS-dL-4el" firstAttribute="top" secondItem="oCO-b0-zv6" secondAttribute="bottom" constant="32" id="0gb-vc-8to"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6qS-dL-4el" secondAttribute="trailing" constant="16" id="9vR-j6-g1O"/>
                             <constraint firstItem="oCO-b0-zv6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="AMt-MX-X72"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DYD-A1-qwM" secondAttribute="trailing" constant="16" id="Cnc-Zv-ifo"/>
                             <constraint firstItem="0aD-W2-mxs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Nzk-1s-D5j"/>
-                            <constraint firstItem="oCO-b0-zv6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="TTR-A2-zgQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0aD-W2-mxs" secondAttribute="trailing" constant="16" id="Vac-9e-kjD"/>
                             <constraint firstItem="6qS-dL-4el" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ceK-BN-Zw4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0aD-W2-mxs" secondAttribute="bottom" constant="96" id="fiC-Fa-Obv"/>
