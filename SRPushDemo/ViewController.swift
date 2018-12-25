@@ -8,7 +8,6 @@ class ViewController: UIViewController {
     var SoPass: String = "641b7cascas9c5a6s2capksc8cac2804560f7fba";
     var apiHost = "https://testcom.srpush.ir:2021/api/createSession";
     var wsHost = "wss://testcom.srpush.ir:2020";
-
     var clientUserID = "DRIVER_146";
     var sessionExpireTime = 0; // session expire after this time (as seconds)
     var session: String = "";
