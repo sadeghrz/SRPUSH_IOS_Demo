@@ -4,10 +4,10 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-    var Username: String = "testcom";
-    var SoPass: String = "641b7cascas9c5a6s2capksc8cac2804560f7fba";
-    var apiHost = "https://testcom.srpush.ir:2021/api/createSession";
-    var wsHost = "wss://testcom.srpush.ir:2020";
+    var Username: String = "testcom1";
+    var SoPass: String = "641b788bcd0fd46eed0f41870a5fc804560f7fba";
+    var apiHost: String = "http://192.168.1.100:9779/api/createSession";
+    var wsHost: String = "ws://192.168.1.100:9780";
     var clientUserID = "DRIVER_146";
     var sessionExpireTime = 0; // session expire after this time (as seconds)
     var session: String = "";
@@ -66,7 +66,9 @@ class ViewController: UIViewController {
     @IBAction func GeSessionClick(_ sender: Any) {
         let parameters: Parameters = [
             "uid": self.clientUserID,
-            "ExTime": self.sessionExpireTime
+            "ExTime": self.sessionExpireTime, 
+            "platform": "IOS",
+            "platformTools": "" //APNS_token (اختیاری) 
         ]
         
         var headers: HTTPHeaders = [
